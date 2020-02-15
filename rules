@@ -1,0 +1,33 @@
+# vi:ft=perl:
+create repository elftoolchain.git
+end repository
+
+# Initial revisions had a svn layout (trunk, branches, tags) for each
+# individual ELF Tool Chain project (ar, nm, etc.)
+match /(projects)/([^/]+)/trunk/
+  repository elftoolchain.git
+  branch \1/\2
+end match
+
+# r378
+match /(users)/([^/]+)/
+  repository elftoolchain.git
+  branch \1/\2
+end match
+
+# Starting with r402 ELF Tool Chain migrated to a standard svn layout.
+# (r516 was the first branch commit.)
+match /trunk/
+  repository elftoolchain.git
+  branch master
+end match
+
+match /(branches)/([^/]+)/
+  repository elftoolchain.git
+  branch \1/\2
+end match
+
+# Skip top-level README that describes the svn layout and is not relevant to
+# the converted repo.  r514, r2099
+match /README
+end match
