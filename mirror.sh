@@ -9,7 +9,7 @@ SVN2GIT=$dir/svn2git/svn-all-fast-export
 svnsync sync file://$dir/svn-repo
 
 # git conversion
-$SVN2GIT $maxrev --fast-import-timeout 3600 --add-metadata-notes \
+$SVN2GIT --fast-import-timeout 3600 --add-metadata-notes \
     --rules rules \
     --identity-map identity.map \
     svn-repo
