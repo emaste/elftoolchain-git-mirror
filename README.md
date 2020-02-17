@@ -1,5 +1,12 @@
 # ELF Tool Chain svn->git mirror tools
 
+This repository contains tools, scripts, and configuration files used for
+an ongoing git mirror of ELF Tool Chain's Subversion repo.
+
+## Dependencies
+- qmake
+- svnsync
+
 ## Usage
 ```
 sh setup.sh
@@ -12,7 +19,8 @@ See [Mirror a Subversion repository Micro Howto](http://www.microhowto.info/howt
 for reference.
 
 ## svn2git
-Local copy of svn2git obtained with:
+This repository contains a copy of svn2git.  It was obtained via `git subtree`
+with this command:
 ```
 git subtree add --prefix svn2git https://github.com/svn-all-fast-export/svn2git master
 ```
