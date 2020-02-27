@@ -1,0 +1,12 @@
+freebsd_instance:
+  image: freebsd-12-1-release-amd64
+
+env:
+  CIRRUS_CLONE_DEPTH: 1
+
+task:
+  install_script:
+  - pkg install -y qmake subversion
+  script:
+  - sh setup.sh
+  - sh mirror.sh 
