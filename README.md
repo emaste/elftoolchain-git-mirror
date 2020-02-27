@@ -14,6 +14,12 @@ sh mirror.sh
 ```
 The conversion is output as a bare git repo in the elftoolchain.git directory.
 
+To be implemented/documented:
+- pushing the result to a remote host
+  (i.e., https://github.com/elftoolchain/elftoolchain/)
+
+- automation
+
 ## svnsync
 See [Mirror a Subversion repository Micro Howto](http://www.microhowto.info/howto/mirror_a_subversion_repository.html)
 for reference.
